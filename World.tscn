@@ -521,15 +521,6 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 320, 180 )
 
-[node name="Grass" parent="Background" instance=ExtResource( 6 )]
-position = Vector2( 0, -88 )
-
-[node name="Grass2" parent="Background" instance=ExtResource( 6 )]
-position = Vector2( -48, 48 )
-
-[node name="Grass3" parent="Background" instance=ExtResource( 6 )]
-position = Vector2( -32, 56 )
-
 [node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -590,23 +581,41 @@ position = Vector2( 128, 48 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 
+[node name="Grass13" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 208, 64 )
+
+[node name="Grass12" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 192, 64 )
+
+[node name="Grass11" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176, 64 )
+
 [node name="Grass3" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 24, 64 )
+position = Vector2( 64, 64 )
 
 [node name="Grass2" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 176, 8 )
 
 [node name="Grass" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 96, 136 )
+position = Vector2( 96, 128 )
 
 [node name="Grass4" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 192, 24 )
 
+[node name="Grass8" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 176, 24 )
+
 [node name="Grass5" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 240, 96 )
+position = Vector2( 192, 152 )
 
 [node name="Grass6" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 176, 24 )
+position = Vector2( 96, 144 )
 
 [node name="Grass7" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 192, 8 )
+
+[node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 80, 136 )
+
+[node name="Grass10" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 112, 136 )
