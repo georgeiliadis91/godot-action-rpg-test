@@ -19,12 +19,15 @@ var roll_vector = Vector2.DOWN
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
+onready var swordHitbox = $HitboxPivot/SwordHitbox
+
 
 #Movement handling func
 #delta 1sec/ 60 frames depending on machine
 
 func _ready():
 	animationTree.active =true
+	swordHitbox.knockback_vector = roll_vector
 
 
 func _process(delta):
@@ -46,7 +49,10 @@ func move_state(delta):
 	
 	
 	if input_vector != Vector2.ZERO:
+		# gets vector of movement to determinate knockback
 		roll_vector=input_vector
+		swordHitbox.knockback_vector = input_vector
+		
 		#animation handling the first parameters is the name from the animation tree params 
 		animationTree.set("parameters/Idle/blend_position",input_vector)
 		animationTree.set("parameters/Run/blend_position",input_vector)
