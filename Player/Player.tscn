@@ -644,10 +644,10 @@ tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 46 )
-parameters/Attack/blend_position = Vector2( 0.00769234, 0.0122906 )
-parameters/Idle/blend_position = Vector2( 0.00219786, 0.990698 )
-parameters/Roll/blend_position = Vector2( -0.194014, 0.341683 )
-parameters/Run/blend_position = Vector2( 0, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
