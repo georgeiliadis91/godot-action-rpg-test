@@ -14,6 +14,7 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
+var stats = PlayerStats
 
 #instead of using on ready func
 onready var animationPlayer = $AnimationPlayer
@@ -26,6 +27,7 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 #delta 1sec/ 60 frames depending on machine
 
 func _ready():
+	stats.connect("no_health",self,"queue_free")
 	animationTree.active =true
 	swordHitbox.knockback_vector = roll_vector
 
@@ -92,3 +94,7 @@ func set_state_move():
 	
 func move():
 	velocity = move_and_slide(velocity)
+
+
+func _on_Hurtbox_area_entered(area):
+	stats.health -= 1
