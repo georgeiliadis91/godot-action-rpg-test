@@ -658,7 +658,7 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 position = Vector2( 0, -4 )
 rotation = 1.5708
 __meta__ = {
-"_gizmo_extents_": 8.0
+"_gizmo_extents_": 4.0
 }
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
